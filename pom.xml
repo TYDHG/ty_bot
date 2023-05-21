@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.0.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.tydhg</groupId>
+    <artifactId>ty_bot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>ty_bot</name>
+    <description>ty_bot</description>
+
+    <properties>
+        <java.version>11</java.version>
+        <kotlin.version>1.5.10</kotlin.version>
+    </properties>
+
+
+    <dependencies>
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+        <dependency>
+            <groupId>net.mamoe</groupId>
+            <artifactId>mirai-core-jvm</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+
+        <!-- simboot-core-spring-boot-starter -->
+<!--        <dependency>-->
+<!--            <groupId>love.forte.simbot.boot</groupId>-->
+<!--            <artifactId>simboot-core-spring-boot-starter</artifactId>-->
+<!--            &lt;!&ndash; 版本参考下文所述的 Releases &ndash;&gt;-->
+<!--            <version>3.0.0</version>-->
+<!--        </dependency>-->
+
+        <!-- simbot核心库 -->
+<!--        <dependency>-->
+<!--            <groupId>love.forte.simbot</groupId>-->
+<!--            <artifactId>simbot-core</artifactId>-->
+<!--            <version>3.0.0</version>-->
+<!--        </dependency>-->
+        <!-- mirai组件 -->
+<!--        <dependency>-->
+<!--            <groupId>love.forte.simbot.component</groupId>-->
+<!--            <artifactId>simbot-component-mirai-core</artifactId>-->
+<!--            <version>3.0.0.0-M5</version>-->
+<!--        </dependency>-->
+
+    </dependencies>
+
+    <build>
+        <plugins>
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--            </plugin>-->
+        </plugins>
+    </build>
+
+</project>
