@@ -17,15 +17,17 @@
     <properties>
         <java.version>11</java.version>
         <kotlin.version>1.5.10</kotlin.version>
+        <!--    日志输出依赖版本    -->
+        <log4j.version>2.17.2</log4j.version>
     </properties>
 
 
     <dependencies>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,47 +46,83 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 日志输出依赖 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jul</artifactId>
+            <version>${log4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+            <scope>compile</scope>
+        </dependency>
 
+
+        <!-- mirai引用包 -->
         <dependency>
             <groupId>net.mamoe</groupId>
             <artifactId>mirai-core-jvm</artifactId>
-            <version>2.14.0</version>
+            <version>2.15.0-M1</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>${kotlin.version}</version>
+            <version>1.7.10</version>
+        </dependency>
+        <!-- 扫码登录验证bot包 -->
+        <dependency>
+            <groupId>java-mirai-qrcode</groupId>
+            <artifactId>lame</artifactId>
+            <version>0.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/java-mirai-qrcode-0.1.jar</systemPath>
         </dependency>
 
+        <!--    simbot依赖    -->
         <!-- simboot-core-spring-boot-starter -->
-<!--        <dependency>-->
-<!--            <groupId>love.forte.simbot.boot</groupId>-->
-<!--            <artifactId>simboot-core-spring-boot-starter</artifactId>-->
-<!--            &lt;!&ndash; 版本参考下文所述的 Releases &ndash;&gt;-->
-<!--            <version>3.0.0</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>love.forte.simbot.boot</groupId>-->
+        <!--            <artifactId>simboot-core-spring-boot-starter</artifactId>-->
+        <!--            &lt;!&ndash; 版本参考下文所述的 Releases &ndash;&gt;-->
+        <!--            <version>3.0.0</version>-->
+        <!--        </dependency>-->
 
         <!-- simbot核心库 -->
-<!--        <dependency>-->
-<!--            <groupId>love.forte.simbot</groupId>-->
-<!--            <artifactId>simbot-core</artifactId>-->
-<!--            <version>3.0.0</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>love.forte.simbot</groupId>-->
+        <!--            <artifactId>simbot-core</artifactId>-->
+        <!--            <version>3.0.0</version>-->
+        <!--        </dependency>-->
         <!-- mirai组件 -->
-<!--        <dependency>-->
-<!--            <groupId>love.forte.simbot.component</groupId>-->
-<!--            <artifactId>simbot-component-mirai-core</artifactId>-->
-<!--            <version>3.0.0.0-M5</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>love.forte.simbot.component</groupId>-->
+        <!--            <artifactId>simbot-component-mirai-core</artifactId>-->
+        <!--            <version>3.0.0.0-M5</version>-->
+        <!--        </dependency>-->
 
     </dependencies>
 
     <build>
         <plugins>
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.springframework.boot</groupId>-->
+            <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--            </plugin>-->
         </plugins>
     </build>
 
